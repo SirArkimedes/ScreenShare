@@ -1,8 +1,8 @@
 {
   "name": "ScreenShare",
   "version": "0.1.0",
-  "summary": "A short description of ScreenShare.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "📸 Prompt to share the screenshot someone took of your app!",
+  "description": "📸 Prompt to share the screenshot someone took of your app! When a screenshot gets taken, a dropdown will prompt the user to share the screenshot they just took.",
   "homepage": "https://github.com/SirArkimedes/ScreenShare",
   "license": {
     "type": "MIT",
@@ -15,6 +15,7 @@
     "git": "https://github.com/SirArkimedes/ScreenShare.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/SirArkimedes",
   "platforms": {
     "ios": "8.0"
   },
