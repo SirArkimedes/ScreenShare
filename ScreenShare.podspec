@@ -9,16 +9,9 @@
 Pod::Spec.new do |s|
   s.name             = 'ScreenShare'
   s.version          = '0.1.0'
-  s.summary          = '📸 Prompt to share the screenshot someone took of your app!'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'Share that screenshot!'
   s.description      = <<-DESC
-📸 Prompt to share the screenshot someone took of your app! When a screenshot gets taken, a dropdown will prompt the user to share the screenshot they just took.
+                       📸 Prompt to share the screenshot someone took of your app!
                        DESC
 
   s.homepage         = 'https://github.com/SirArkimedes/ScreenShare'
