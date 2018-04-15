@@ -37,9 +37,11 @@ open class ScreenShare {
     private func receivedScreenshot() {
         guard let window = UIApplication.shared.keyWindow else {
             assert(false, "keyWindow is nil!")
+            return
         }
         guard let root = window.rootViewController else {
             assert(false, "RootViewController doesn't exist!")
+            return
         }
 
         // Don't do anything if there is no image.
@@ -56,6 +58,7 @@ open class ScreenShare {
 
         guard let context = UIGraphicsGetCurrentContext() else {
             assert(false, "UIGraphicsGetCurrentContext() is nil!")
+            return nil
         }
 
         window.layer.render(in:context)
@@ -73,6 +76,7 @@ extension ScreenShare: PromptPopViewDelegate {
     public func didTapPrompt() {
         guard let root = UIApplication.shared.keyWindow?.rootViewController else {
             assert(false, "RootViewController doesn't exist!")
+            return
         }
 
         print("tapped")
