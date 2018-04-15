@@ -20,45 +20,29 @@
  THE SOFTWARE.
  */
 
-import UIKit
-import ScreenShare
+import FBSnapshotTestCase
 
-class ViewController: UIViewController {
+@testable import ScreenShare
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ScreenShareUITests: FBSnapshotTestCase {
+
+    override func setUp() {
+        super.setUp()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        let button = UIButton()
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        button.center = view.center
-        button.setTitle("Press me!", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        view.addSubview(button)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @objc private func buttonPressed() {
+    func testPostView_WithName() {
         let view = PromptPopView(with: self)
-        self.view.addSubview(view)
-    }
+        UIViewController().view.addSubview(view)
 
+        FBSnapshotVerifyView(view)
+        FBSnapshotVerifyLayer(view.layer)
+    }
+    
 }
 
-extension ViewController: PromptPopViewDelegate {
-
-    public func didTapPrompt() {
-        print("tapped")
+// Create a dummy delegate handler.
+extension ScreenShareUITests: PromptPopViewDelegate {
+    func didTapPrompt() {
+        print("")
     }
-
 }
-

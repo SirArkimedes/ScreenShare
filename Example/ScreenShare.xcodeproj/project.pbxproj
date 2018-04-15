@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4923A1732083125B0002EBC3 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923A1722083125B0002EBC3 /* UITests.swift */; };
+		4923A174208313AB0002EBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		4AF8B906A252A47F9D5A8738 /* Pods_ScreenShare_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9373F3E4928D1489F8AD9AC3 /* Pods_ScreenShare_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* UnitTests.swift */; };
 		69CFC44C6806390AE9817455 /* Pods_ScreenShare_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E029A3671EFEE3A0ABE9A5 /* Pods_ScreenShare_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,7 @@
 /* Begin PBXFileReference section */
 		38E029A3671EFEE3A0ABE9A5 /* Pods_ScreenShare_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenShare_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41489452883FEADF035F6315 /* ScreenShare.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ScreenShare.podspec; path = ../ScreenShare.podspec; sourceTree = "<group>"; };
+		4923A1722083125B0002EBC3 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		58FC51F5F06F0C7AD0D068C7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5A8C8491D4D0E0C3DFAF639D /* Pods-ScreenShare_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenShare_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenShare_Tests/Pods-ScreenShare_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ScreenShare_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenShare_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +44,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ScreenShare_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenShare_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		9373F3E4928D1489F8AD9AC3 /* Pods_ScreenShare_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenShare_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A438A37F27A6684453A717 /* Pods-ScreenShare_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenShare_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenShare_Example/Pods-ScreenShare_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D2225EEC504FFF7658B84902 /* Pods-ScreenShare_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenShare_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenShare_Tests/Pods-ScreenShare_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +118,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* UnitTests.swift */,
+				4923A1722083125B0002EBC3 /* UITests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -390,7 +394,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				4923A174208313AB0002EBC3 /* ViewController.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* UnitTests.swift in Sources */,
+				4923A1732083125B0002EBC3 /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +580,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenShare_Example.app/ScreenShare_Example";
 			};
 			name = Debug;
 		};
@@ -592,6 +599,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenShare_Example.app/ScreenShare_Example";
 			};
 			name = Release;
 		};
