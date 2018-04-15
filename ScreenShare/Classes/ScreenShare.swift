@@ -18,7 +18,7 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-*/
+ */
 
 import Foundation
 
@@ -26,14 +26,61 @@ open class ScreenShare {
 
     static open var instance = ScreenShare()
 
+    private var screen: UIImage?
+
     open func createScreenshotListener() {
         NotificationCenter.default.addObserver(forName: .UIApplicationUserDidTakeScreenshot, object: nil, queue: .main) { notification in
-            print(notification)
             self.receivedScreenshot()
         }
     }
 
     private func receivedScreenshot() {
+        guard let window = UIApplication.shared.keyWindow else {
+            assert(false, "keyWindow is nil!")
+        }
+        guard let root = window.rootViewController else {
+            assert(false, "RootViewController doesn't exist!")
+        }
+
+        // Don't do anything if there is no image.
+        if let screen = grabCurrentScreen(with: window) {
+            self.screen = screen
+
+            let view = PromptPopView(with: self)
+            root.view.addSubview(view)
+        }
+    }
+
+    private func grabCurrentScreen(with window: UIWindow) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(window.layer.frame.size, false, UIScreen.main.scale)
+
+        guard let context = UIGraphicsGetCurrentContext() else {
+            assert(false, "UIGraphicsGetCurrentContext() is nil!")
+        }
+
+        window.layer.render(in:context)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image
+    }
+
+}
+
+extension ScreenShare: PromptPopViewDelegate {
+
+    public func didTapPrompt() {
+        guard let root = UIApplication.shared.keyWindow?.rootViewController else {
+            assert(false, "RootViewController doesn't exist!")
+        }
+
+        print("tapped")
+
+        if let screen = screen {
+            let vc = UIActivityViewController(activityItems: [screen], applicationActivities: nil)
+            root.present(vc, animated: true, completion: nil)
+        }
     }
 
 }
